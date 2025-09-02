@@ -6,16 +6,42 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "both": "expo start --android && expo start --ios"
   },
   "dependencies": {
+    "@google/genai": "^1.16.0",
+    "@google/generative-ai": "^0.24.1",
+    "@react-native-async-storage/async-storage": "^2.1.2",
+    "@react-native-clipboard/clipboard": "^1.16.3",
+    "@react-navigation/drawer": "^6.6.3",
+    "@react-navigation/native": "^6.1.18",
+    "@react-navigation/native-stack": "^6.11.0",
+    "axios": "^1.11.0",
     "expo": "~53.0.22",
+    "expo-clipboard": "~7.1.5",
+    "expo-linear-gradient": "~14.1.5",
     "expo-status-bar": "~2.2.3",
+    "firebase": "^12.2.1",
+    "openai": "^5.16.0",
     "react": "19.0.0",
-    "react-native": "0.79.6"
+    "react-native": "0.79.6",
+    "react-native-bootsplash": "^6.3.10",
+    "react-native-gesture-handler": "~2.24.0",
+    "react-native-get-random-values": "^1.11.0",
+    "react-native-linear-gradient": "^2.8.3",
+    "react-native-reanimated": "~3.17.4",
+    "react-native-safe-area-context": "^5.4.0",
+    "react-native-screens": "~4.11.1",
+    "react-native-size-matters": "^0.4.2",
+    "react-native-svg": "^15.12.1",
+    "react-native-vector-icons": "^10.3.0",
+    "uuid": "^11.1.0",
+    "expo-constants": "~17.1.7"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.20.0",
+    "reactotron-react-native": "^5.1.15"
   },
   "private": true
 }
