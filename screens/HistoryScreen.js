@@ -24,7 +24,7 @@ import {
   getDocs,
 } from 'firebase/firestore';
 
-// ✅ Enable LayoutAnimation on Android
+// Enable LayoutAnimation on Android
 if (Platform.OS === 'android' && UIManager.setLayoutAnimationEnabledExperimental) {
   UIManager.setLayoutAnimationEnabledExperimental(true);
 }
@@ -45,7 +45,7 @@ const HistoryScreen = () => {
     const unsubscribe = onSnapshot(q, (snapshot) => {
       const msgs = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
 
-      // 👇 Smooth transition whenever messages update
+      // transition whenever messages update
       LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
       setHistory(msgs);
     });
@@ -53,7 +53,7 @@ const HistoryScreen = () => {
     return () => unsubscribe();
   }, [user]);
 
-  // ✅ Clear history from Firestore with animation
+  // Clear history from Firestore with animation
   const clearHistory = async () => {
     try {
       if (!user) return;
@@ -68,7 +68,7 @@ const HistoryScreen = () => {
       await Promise.all(deletions);
 
       LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
-      setHistory([]); // 👈 clear instantly with animation
+      setHistory([]); //  clear instantly with animation
 
       Alert.alert('Success', 'Chat history cleared!');
     } catch (e) {
