@@ -3,7 +3,7 @@ import OpenAI from "openai";
 
 
 const openai = new OpenAI({
-  apiKey: "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",
+  apiKey: YOUR API 🗝 KEY,
   baseURL: "https://openrouter.ai/api/v1",
   dangerouslyAllowBrowser: true, 
 });
@@ -15,7 +15,7 @@ export async function getAIResponse(userMessage) {
     const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
       method: "POST",
       headers: {
-        "Authorization": `Bearer ${"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"}`,
+        "Authorization": `Bearer ${YOUR API KEY}`,
         "Content-Type": "application/json",
         "HTTP-Referer": "<YOUR_SITE_URL>", 
         "X-Title": "<YOUR_SITE_NAME>",    
