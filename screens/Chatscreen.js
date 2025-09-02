@@ -23,7 +23,7 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { LinearGradient } from 'expo-linear-gradient';
 import TypingBubble from '../components/typingbubble';
 
-// 🔹 Firebase imports
+// Firebase imports
 import { auth, db } from "../config/firebase";
 import { addDoc, collection, onSnapshot, orderBy, query, serverTimestamp } from 'firebase/firestore';
 
@@ -37,7 +37,7 @@ const Chatscreen = ({ navigation }) => {
   const user = auth.currentUser;
   const chatId = "botChat"; // ek hi bot session ke liye
 
-  // ✅ Firebase messages listener
+  // Firebase messages listener
   useEffect(() => {
     if (!user) return;
 
@@ -65,7 +65,7 @@ const Chatscreen = ({ navigation }) => {
     navigation.setOptions({ headerShown: false });
   }, [navigation]);
 
-  // 🔹 Send message
+  //  Send message
   const onmessagesent = async (sentmsg) => {
     const text = String(sentmsg ?? '').trim();
     if (!text || !user) return;
